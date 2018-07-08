@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "develop": "healthybee-subscription",
+    "default": "healthybee-subscription"
+  }
+}
