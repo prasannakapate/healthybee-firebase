@@ -17,29 +17,29 @@ menuRouter.get('/', (req, res) => {
 // Post menu api
 menuRouter.post('/', (req, res) => {
   firebaseHelper.firestore.creatNewDocument(db, CONST.COLLECTIONS.MENU, req.body);
-  res.send('created successfully');
+  res.status(201).send('created successfully');
 });
 
 // Update menu api
-menuRouter.patch('/:categoryId', (req, res) => {
+menuRouter.patch('/:itemId', (req, res) => {
   firebaseHelper.firestore.updateDocument(
     db,
     CONST.COLLECTIONS.MENU,
-    req.params.categoryId,
+    req.params.itemId,
     req.body
   );
-  res.send('Update a new menu');
+  res.status(200).send('Update a new menu');
 });
 
 // Delete menu api
-menuRouter.delete('/:categoryId', (req, res) => {
+menuRouter.delete('/:itemId', (req, res) => {
   firebaseHelper.firestore.deleteDocument(
     db,
     CONST.COLLECTIONS.MENU,
-    req.params.categoryId,
+    req.params.itemId,
     req.body
   );
-  res.send('Menu deleted');
+  res.status(200).send('Menu deleted');
 });
 
 // Not found router after /menu
