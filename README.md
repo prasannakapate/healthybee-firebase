@@ -1,3 +1,3 @@
 # healthybee-firebase
 
-## https://us-central1-healthybee-subscription.cloudfunctions.net/app
+## https://us-central1-healthybee-subscription.cloudfunctions.net/api
