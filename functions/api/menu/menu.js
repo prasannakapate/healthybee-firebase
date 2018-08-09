@@ -3,8 +3,8 @@
 const express = require('express');
 const firebaseHelper = require('firebase-functions-helper');
 let menuRouter = express.Router();
-const CONST = require('../../config/constants');
-require('../../config/db');
+const CONST = require('../../config/constants.js');
+require('../../config/db.js');
 
 // Get menu api
 menuRouter.get('/', (req, res) => {

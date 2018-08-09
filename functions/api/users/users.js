@@ -3,7 +3,7 @@
 const express = require('express');
 let usersRouter = express.Router();
 // const CONST = require('../../config/constants');
-require('../../config/db');
+require('../../config/db.js');
 
 // Get USER api
 usersRouter.get('/:uid', (req, res) => {

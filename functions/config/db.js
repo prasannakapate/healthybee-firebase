@@ -1,6 +1,6 @@
 const functions = require('firebase-functions');
 const firebase = require('firebase-admin');
-const serviceAccount = require("../keys/healthybee-subscription-firebase-adminsdk-czjwv-1e94d450fb.json");
+const serviceAccount = require("./healthybee-subscription-firebase-adminsdk-czjwv-1e94d450fb.json");
 //configs
 // firebase.initializeApp(functions.config().firebase);
 
