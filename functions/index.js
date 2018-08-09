@@ -5,11 +5,13 @@ const app = express();
 const bodyParser = require('body-parser');
 const contactsApi = require('./api/contacts');
 const menuApi = require('./api/menu');
+const usersApi = require('./api/users');
 const CONST = require('./config/constants');
 require('./config/db');
 
 app.use(CONST.END_POINTS.CONTACTS, contactsApi.contactsRouter);
 app.use(CONST.END_POINTS.MENU, menuApi.menuRouter);
+app.use(CONST.END_POINTS.USERS, usersApi.usersRouter);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
