@@ -3,12 +3,12 @@ module.exports = {
     FACTS: '/facts',
     MENU: '/menu',
     CONTACTS: '/contacts',
-    USERS: '/users'
+    USERS: '/users',
+    AUTH: '/auth'
   },
   COLLECTIONS: {
     FACTS: 'facts',
     MENU: 'menu',
-    CONTACTS: 'contacts',
-    USERS: 'users'
+    CONTACTS: 'contacts'
   }
 };

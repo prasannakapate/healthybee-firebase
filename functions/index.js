@@ -5,12 +5,14 @@ const bodyParser = require('body-parser');
 //all apis
 const menuApi = require('./api/menu/menu.js');
 const usersApi = require('./api/users/users.js');
+const authApi = require('./api/auth/auth.js')
 //config
 const CONST = require('./config/constants.js');
 require('./config/db.js');
 
 app.use(CONST.END_POINTS.MENU, menuApi.menuRouter);
 app.use(CONST.END_POINTS.USERS, usersApi.usersRouter);
+app.use(CONST.END_POINTS.AUTH, authApi.authRouter);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
