@@ -1,14 +1,16 @@
 module.exports = {
   END_POINTS: {
-    FACTS: '/facts',
-    MENU: '/menu',
+    AUTH: '/auth',
     CONTACTS: '/contacts',
-    USERS: '/users',
-    AUTH: '/auth'
+    FACTS: '/facts',
+    FEEDBACK: '/feedback',
+    MENU: '/menu',
+    USERS: '/users'
   },
   COLLECTIONS: {
+    CONTACTS: 'contacts',
     FACTS: 'facts',
+    FEEDBACK: 'feedback',
     MENU: 'menu',
-    CONTACTS: 'contacts'
   }
 };

@@ -24,25 +24,35 @@ authRouter.post("/login", (req, res, next) => {
     }
 
     // On success return the Firebase Custom Auth Token.
-    const firebaseToken = admin.auth().createCustomToken(username);
-    return handleResponse(username, res, 200, {
-      token: firebaseToken,
-    });
+   admin.auth().createCustomToken(username)
+      .then(customToken => {
+        console.log('firebaseToken-------->', customToken);
+        return handleResponse(username, res, 200, {
+          token: customToken,
+        });
+      })
+      .catch(error => console.log('error ---->', error));
+      return;
   } catch (error) {
     return handleError(username, error);
   }
 });
 
 const handleResponse = (username, res, status, body) => {
-  console.log({ User: username }, {
-    Response: {
-      Status: status,
-      Body: body,
-    },
-  });
   if (body) {
-    res.status(200).json(body);
+    admin.auth().signInWithCustomToken(body)
+    .then(response => {
+      console.log('response logs', response);
+      res.status(200).json(body);
     return;
+    }).catch(error => {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+      return res.json(error);
+    });
+    
   }
   res.sendStatus(status);
   return;
