@@ -5,8 +5,7 @@ const serviceAccount = require("./healthybee-subscription-firebase-adminsdk-czjw
 // firebase.initializeApp(functions.config().firebase);
 
 firebase.initializeApp({
-    credential: firebase.credential.cert(serviceAccount),
-    databaseURL: "https://healthybee-subscription.firebaseio.com"
+    credential: firebase.credential.cert(serviceAccount)
 });
 admin = firebase;
 db = firebase.firestore();

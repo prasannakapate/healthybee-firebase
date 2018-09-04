@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const authApi = require('./api/auth/auth.js');
 const feedbackApi = require('./api/feedback/feedback.js');
 const menuApi = require('./api/menu/menu.js');
+const offersApi = require('./api/offers/offers.js')
 const usersApi = require('./api/users/users.js');
 
 //config
@@ -17,6 +18,7 @@ app.options('*', cors());
 app.use(CONST.END_POINTS.AUTH, authApi.authRouter);
 app.use(CONST.END_POINTS.FEEDBACK, feedbackApi.feedbackRouter);
 app.use(CONST.END_POINTS.MENU, menuApi.menuRouter);
+app.use(CONST.END_POINTS.OFFERS, offersApi.offersRouter);
 app.use(CONST.END_POINTS.USERS, usersApi.usersRouter);
 
 app.use(bodyParser.json());
