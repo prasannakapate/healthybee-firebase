@@ -13,8 +13,13 @@ let mailOptions = {
 let transporter = nodemailer.createTransport(CONST.FEEDBACK_TRANSPORTER);
 
 function SendEmail(userDetails) {
-  mailOptions.html = `<h3>Message Details:</h3>
-    <b>Email: </b>${userDetails.email}<br /><br />`; // html body
+  mailOptions.html = `<p>Hey there,</p> <br />
+    <p> Thank you for showing interest in us. </p>
+    <h3>Promo code: <b>Healthy10</b>, valid till Today.</h3>
+    <p>Please show this at any of HealthyBee's restaurant and get 10% Off <sup>*</sup>. 
+    <br />Enjoy your delicious healthy meal today.</p>
+    <br /><br />
+    <p>Thanks, <br />HealthyBee Team</p>`; // html body
   mailOptions.to = `${userDetails.email}`;
 
   transporter.sendMail(mailOptions, (error, info) => {
