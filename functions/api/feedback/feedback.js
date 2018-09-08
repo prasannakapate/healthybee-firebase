@@ -15,16 +15,7 @@ let mailOptions = {
   html: ""
 };
 
-let transporter = nodemailer.createTransport({
-  service: "gmail",
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: "healthybee.fit.feedback@gmail.com",
-    pass: "17@Healthy"
-  }
-});
+let transporter = nodemailer.createTransport(CONST.FEEDBACK_TRANSPORTER);
 
 function SendEmail(userDetails) {
   mailOptions.html = `<h3>Message Details:</h3>
