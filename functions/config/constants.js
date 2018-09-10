@@ -27,5 +27,15 @@ module.exports = {
       user: "healthybee.fit.feedback@gmail.com",
       pass: "17@Healthy"
     }
+  },
+  PROMO_TRANSPORTER: {
+    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "healthybee.fit.promo@gmail.com",
+      pass: "17@Healthy"
+    }
   }
 };

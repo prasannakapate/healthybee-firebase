@@ -4,16 +4,17 @@ require("../../config/db.js");
 
 // setup email data with unicode symbols
 let mailOptions = {
-  from: '"HeallthyBee Team" <healthybee.fit.feedback@gmail.com>',
+  from: '"HeallthyBee Team" <healthybee.fit.promo@gmail.com>',
   to: "",
-  subject: "HealthyBee - Promo Code",
+  cc: '"HeallthyBee Team" <healthybee.fit.promo@gmail.com>',
+  subject: "HealthyBee - Dine-In Promo Code",
   html: ""
 };
 
-let transporter = nodemailer.createTransport(CONST.FEEDBACK_TRANSPORTER);
+let transporter = nodemailer.createTransport(CONST.PROMO_TRANSPORTER);
 
 function SendEmail(userDetails) {
-  mailOptions.html = `<p>Hey there,</p> <br />
+  mailOptions.html = `<p>Dear Customer,</p> <br />
     <p> Thank you for showing interest in us. </p>
     <h3>Promo code: <b>Healthy10</b>, valid till Today.</h3>
     <p>Please show this at any of HealthyBee's restaurant and get 10% Off <sup>*</sup>. 
