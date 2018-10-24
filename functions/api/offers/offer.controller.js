@@ -11,7 +11,7 @@ let mailOptions = {
   html: ""
 };
 
-let transporter = nodemailer.createTransport(CONST.PROMO_TRANSPORTER);
+let transporter = nodemailer.createTransport(CONST.FEEDBACK_TRANSPORTER);
 
 function SendEmail(userDetails) {
   mailOptions.html = `<p>Dear Customer,</p> <br />
