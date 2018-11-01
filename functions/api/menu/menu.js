@@ -10,7 +10,7 @@ require("../../config/db.js");
 menuRouter.get("/", (req, res) => {
   let menuData = [];
   db.collection(CONST.COLLECTIONS.MENU)
-    // .where("category", "==", "Fruit salad & custard")
+    .where("category", "==", req.query.category)
     .get()
     .then(snapshot => {
       snapshot.forEach(doc => {
