@@ -16,7 +16,7 @@ let transporter = nodemailer.createTransport(CONST.FEEDBACK_TRANSPORTER);
 function SendEmail(userDetails) {
   mailOptions.html = `<p>Dear Customer,</p> <br />
     <p> Thank you for showing interest in us. </p>
-    <h3>Promo code: <b>Healthy10</b>, valid till Today.</h3>
+    <h3>Promo code: <b>Healthy05</b>, valid till Today.</h3>
     <p>Please show this at any of HealthyBee's restaurant and get 5% Off <sup>*</sup>. 
     <br />Enjoy your delicious healthy meal today.</p>
     <br /><br />
